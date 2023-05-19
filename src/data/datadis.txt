@@ -1,0 +1,124 @@
+				<ProjHeader
+					title='Datadis, rediseño de la web pública y privada'
+					role={["Product designer", "UX"]}
+					intro='
+					El proyecto consistio en rediseñar la web de Datadis.
+					La web constaba de dos partes muy difereciadas; la web privada que era una herramienta que servia a los usuarios para ver sus consumos y gestionar permisos para el acceso de sus datos y la otra parte era una web pública que tenía un fin marketiniano.
+					
+				 '
+					client='client A'
+				/>
+				<Image
+					className=' aspect-auto'
+					src='/photos/datadis_main.jpg'
+					width={640}
+					height={430}
+					alt='Accede a los consumos eléctricos de todos tus contratos
+En Datadis te conectamos con tus datos de consumo eléctrico, en cualquier distribuidora donde esté conectado tu suministro.'
+				/>
+				<Section
+					line={true}
+					title='Contexto'>
+					Datadis es una plataforma creada por las empresas distribuidoras para simplificar el acceso a los datos de los consumidores. Los usuarios pueden consultar todos los
+					contratos electricos a su nombre desde un único sitio, independientemente del lugar o compañia contratada. <br /> <br />
+					Al contactarnos tenian clara la intencion de mejorar la experiencia de uso de su web. Hasta ahora la experiencia habia sido definida buscando ofrecer una solución segura
+					para los datos.
+					<br />
+					<br />
+				</Section>
+				<Section
+					line={true}
+					title='Retos'>
+					Los retos son muchos y variados. La web existia cuando empezamos a trabajar en ella, la arquitectura no funcionaba.
+					<br />
+					Además de la estructura, la forma de dirigirse al usuario no era la apropiada, debiamos ser precisos con los terminos usados, pero alejarnos del lenguaje excesivamente
+					técnico y legal. <br /> <br />
+					El alta de usuario era un proceso muy complejo, se necesitaba verificar la identidad de la persona o empresas que se registraban.
+					<br />
+					<br />
+					Teniamos que diseñar la plataforma para perfiles de usuarios muy distintos con diferente uso de la plataforma e información que consultan. <br />
+					<br />
+					No podemos guardar ningun dato de los usuarios en la base de datos, lo que obligaba a cargar cada vez todos los datos, produciendo tiempos de carga muy altos y perdida de
+					avisos cuando algo falla.
+				</Section>
+				<div>
+					<div className='font-normal text-2xl mt-8 mb-4'>Main pain points</div>
+					<div className='grid mt-2 gap-8 mb-8 grid-col-1 md:grid-cols-3 '>
+						<div className=' font-light text-2xl text-primary '>
+							<div className='text-neutral  font-normal text-2xl mb-2'>#01</div>
+							Alta de usuarios compleja, los usuarios necesitan identificarse y ser verificados.
+						</div>
+						<div className=' font-light text-2xl text-primary '>
+							<div className='text-neutral  font-normal text-2xl mb-2'>#02</div> Los datos tardan mucho en cargar. El usuario no sabe que datos existen o si hay un error.
+						</div>
+						<div className=' font-light text-2xl text-primary '>
+							<div className='text-neutral  font-normal text-2xl mb-2'>#03</div>Los mensajes escritos desde perspectiva legal. Los usuarios no los entienden.{" "}
+						</div>{" "}
+					</div>
+				</div>
+				<Section
+					line={true}
+					title='Soluciones'>
+					Para solucionar los problemas de este proyecto tuvimos que ir un poco más allá de lo que solemos necesitar entrar en los proyectos.
+					<br />
+					Tuvimos que meternos en lo más profundo de Datadis para entender los procesos dentro de Datadis y descubrir que las excecpciones eran la regla y el proceso de validación
+					requeria de muchos pasos manuales, qué procedimos a categorizarlos, agruparlos y simplificar el número de casuisticas pero no pudimos automatizarlos.
+					<br />
+					<br />
+					Para simplificar el alta tuvimos que recorrer todas las casuisticas en webs similares para identificar oportunidades para simplificar el proceso.
+					<br />
+					<br />Y tambien tuvimos que ir más lejos en el campo de la programación proponiendo estrategias para reducir el tiempo de llamadas a la API, como modificar el orden de
+					las llamadas usando metodos bayesianos para reducir el tiempo de carga la mayor parte de veces.
+					<br />
+					<br />
+					Nos sumergimos en diseñar la API, tanto la documentación como la nomenclatura de las llamadas.
+					<br />
+					<br />Y muchas otras cosas que si quieres descubrir con más detalle puedes leer el caso completo
+				</Section>
+		
+					
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    Lo primero por medio de entrevistas identificamos los arquetipos de personas que utilizan la plataforma, con esas entrevistas y un análisis heuristico ya si pudimos hacer
+					una primera propuesta de arquitectura de la información. <br />
+					<br />
+					Dividimos muy claramente la forma de afrontar la parte pública y el dashboard privado, pues no se dirigian al mismo publicos y tenian propositos muy diferentes.
+					<br />
+					<br />
+					Necesitamos hacer más entrevistas con los distintos stakeholders involucrados en el proceso para entender mejor como era todo el proceso de alta de usuario, que al final
+					era un proceso muy manual en el que participaban más personas de las que nos imaginabamos y que tenia infinidad de casuisticas.
+					<br />
+					<br />
+					Para poder explorar formas de simplificar el proceso que pudieran ser aprobadas por los stakehoders de la distribuidoras hicimos un benchmark de las diferentes soluciones
+					que habian implementado las propias distribuidoras en su propias paginas web comerciales. <br />
+					<br />
+					Hubo mucho de service design al tener que diseñar todo el proceso de validación y como iba impactando cada modificación en el proceso a los distintos departamentos de
+					Datadis. <br />
+					<br />
+					Uno de los grandes retos de la plataforma estaba en la parte en la que podias compartir tus consumos con otra gente, esa parte era un gran punto de dolor porque no se
+					entendia quien era el que compartia la información y era dificil de gestionar. Una de las partes que más se usaba de la plataforma era la parte de la API pues al final la
+					plataforma era más usada por profesionales como parte habilitante de su negocio que como los propios usuarios finales como herramienta de consulta. Centralizamos todas
+					las llamadas de la API en una sola, especificando en que llamadas necesitabas estar logueado. Hicimos un intenso trabajo de documentación que al fin y al cabo es lo único
+					que necesita el usuario que vaya a acceder a esta plataforma de esta manera, que era un amplio porcentaje de los usuarios.
+
+
+// Hicimos un análisis heuristico y entrevistas con usuarios para identificar los problemas, en este caso, identificamos que además de una serie de decisiones en cuanto a
+// 					arquitectura y diseño mejorables habia algunos fallos de base con una problematica causada por la propia indiosincracia de la herramienta. Temas legales, de acceso a la
+// 					informacion y del propio funcionamiento de la infraestructura. Lo que nos llevo a tomar decisiones que no solo tocaban la capa visual sino tambien necesitaba de service
+// 					design, identificando la problematica más a bajo nivel. La solución a pesar de lo corto del proyecto se tomo entrando en todos los apartados posibles, tuvimos que
+// 					redefinir el proceso de validación de los usuarios y modificar el proceso de registro / login, lo hicimos lo más sencillo posible para lo que tuvimos que redefinir toda
+// 					la parte del servicio, intentando llegar a compromisos con la infraestructura de Datadis como de todas las distribuidoras de energia que eran en última instancia las que
+// 					tenian los datos. Redefinimos toda la arquitectura, diferenciando más claramente cual era la web pública, de contenido más comercial y marketiniano y la parte privada,
+// 					que era una herramienta de consulta de datos y de gestión de información de consumo electrico. En la parte pública nos enfocamos en explicar mejor las virtudes de la
+// 					plataforma y los beneficios que tenia para los distintos usuarios. En la parte privada creamos un dashboard que fuera más claro y que aportara más información valiosa al
+// 					usuario. Uno de los grandes retos de la plataforma estaba en la parte en la que podias compartir tus consumos con otra gente, esa parte era un gran punto de dolor porque
+// 					no se entendia quien era el que compartia la información y era dificil de gestionar. Una de las partes que más se usaba de la plataforma era la parte de la API pues al
+// 					final la plataforma era más usada por profesionales como parte habilitante de su negocio que como los propios usuarios finales como herramienta de consulta. Centralizamos
+// 					todas las llamadas de la API en una sola, especificando en que llamadas necesitabas estar logueado. Hicimos un intenso trabajo de documentación que al fin y al cabo es lo
+// 					único que necesita el usuario que vaya a acceder a esta plataforma de esta manera, que era un amplio porcentaje de los usuarios.
