@@ -13,7 +13,7 @@ export default function Works({ max = 1000, maxCol = 3, filters = false, delay =
 			)}
 
 			<div
-				className={`py-8 w-full grid   gap-x-6 gap-y-16 grid-cols-1 ${
+				className={`py-8 w-full grid   gap-x-12 gap-y-24 grid-cols-1 ${
 					maxCol > 3 ? "md:grid-cols-2 xl:grid-cols-4" : maxCol > 2 ? "md:grid-cols-2 xl:grid-cols-3" : maxCol > 1 ? "md:grid-cols-2" : ""
 				} `}>
 				{data.map((d, i) => (

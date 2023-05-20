@@ -9,7 +9,7 @@ export default function Header() {
 	const pathname = usePathname();
 	const rutas = pathname.split("/").slice(1);
 
-	const [selected, setSelected] = useState("home");
+	const [selected, setSelected] = useState(rutas[0]);
 	console.log(rutas);
 	const menu = [
 		{ name: "home", url: "/" },
@@ -18,7 +18,10 @@ export default function Header() {
 	];
 	return (
 		<div className='my-4'>
-			<Line />
+			<Line
+				delay={1}
+				b={true}
+			/>
 			<div className='my-4'>
 				<ul className='flex gap-16 '>
 					{menu.map((item) => (

@@ -1,5 +1,5 @@
 "use client";
-import { motion, useAnimate, stagger } from "framer-motion";
+import { motion } from "framer-motion";
 import Works from "@/components/works";
 import Line from "@/components/line";
 
@@ -22,24 +22,17 @@ export default function Home() {
 			</motion.div>
 
 			<div className='w-full h-48'></div>
-			<motion.div
-				initial={{ opacity: 1, scaleX: 0, x: "-50%" }}
-				animate={{ opacity: 1, scaleX: 1, x: 0 }}
-				transition={{ duration: 1, delay: 1.6 }}
-				className='border-t-4  border-neutral w-full'></motion.div>
+			<Line
+				b={false}
+				delay={1.7}
+			/>
 			<motion.div
 				initial={{ opacity: 0, y: "10px" }}
 				animate={{ opacity: 1, y: 0 }}
 				transition={{ duration: 1, delay: 2 }}
-				className='px-0 py-2 text-2xl font-bold uppercase leading-none '>
-				Works
+				className=''>
+				<h2 className='noline'>Works</h2>
 			</motion.div>
-			<Works
-				max={4}
-				maxCol={2}
-				filters={false}
-				delay={2}
-			/>
 		</div>
 	);
 }

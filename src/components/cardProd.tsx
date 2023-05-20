@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Line from "@/components/line";
 
 export default function CardProject({
 	d,
@@ -20,29 +21,26 @@ export default function CardProject({
 }) {
 	console.log(d);
 	return (
-		
 		<motion.div
 			key={i}
-			initial={{ opacity: 0, y: "50px" }}
+			initial={{ opacity: 0, y: "100px" }}
 			animate={{ opacity: 1, y: 0 }}
-			transition={{ duration: 0.5, delay: delay + i * 0.15, ease: "easeIn" }}
-			className={` flex flex-col   pt-4 gap-4 border-t-2 border-neutral justify-between`}>
-			<div className='flex flex-col'>
-				<div className='w-full flex justify-between pb-4'>
-					<h3 className={`text-3xl font-semibold mb-3 `}>{d.title}</h3>
-					<div className='  font-light text-2xl'>{d.year}</div>
-				</div>
-				<Link href={`/work/`+d.slug}>
-					<div className='w-full bg-pink-200 h-96 hover:bg-red-300 transition-colors'></div>
-				</Link>
-				<p className={`text-2xl font-light mt-4 `}>{d.desc}</p>
-				<div className='flex  flex-row-reverse gap-2'>
-					
-				</div>
+			transition={{ duration: 0.8, delay: delay + i * 0.3, ease: "circOut" }}
+			className={`w-full flex flex-col     gap-3  justify-between items-center`}>
+			<Line delay={delay + 0.6 + i * 0.3} />
+			<div className='w-full flex justify-between items-center  '>
+				<h3>{d.title}</h3>
+				<h3 className='light'>{d.year}</h3>
 			</div>
+			<Link
+				className='w-full'
+				href={`/work/` + d.slug}>
+				<div className='w-full h-96 bg-pink-200 hover:bg-red-300 transition-colors'></div>
+			</Link>
+			<p className={`w-full`}>{d.desc}</p>
 
 			{d.tags && (
-				<div className='w-full flex  gap-1 mt-4 flex-wrap-reverse'>
+				<div className='w-full flex  gap-1  flex-wrap-reverse'>
 					{d.tags.map((tag) => (
 						<a
 							href={`/work/tags/${tag.toLowerCase().replace(" ", "_")}`}

@@ -1,3 +1,32 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@layer base {
+p,
+ul,
+ol,
+blockquote {
+  @apply my-2  md:w-2/3;
+}
+
+h1 {
+  @apply text-6xl mt-12 mb-4 leading-snug;
+}
+
+h2 {
+  @apply w-full border-neutral border-t-4 pt-4 overflow-visible  text-3xl mt-8  leading-snug;
+}
+h2.noline {
+  @apply w-full  border-none   text-3xl mt-0  leading-snug;
+}
+
+
+h3 {
+  @apply   text-2xl my-2 leading-snug;
+}
+h3.light{
+  @apply   text-2xl my-2 font-thin leading-snug;
+}
+}

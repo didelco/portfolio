@@ -1,51 +1,53 @@
 "use client";
-import { motion, useAnimate } from "framer-motion";
+import { motion } from "framer-motion";
 
-export default function ProjHeader({ title, intro, role, client, sector }: { title: string; intro: string; role: string[]; client: string; sector: string[] }) {
+export default function ProjHeader({ title, intro, role, sector }: { title: string; intro: string; role: string[]; client: string; sector: string[] }) {
 	return (
 		<div className='w-full flex flex-col justify-center gap-12'>
-			<motion.h2
+			<motion.h1
 				initial={{ opacity: 0, y: "20px" }}
 				animate={{ opacity: 1, y: 0 }}
 				transition={{ duration: 1 }}
 				className='font-bold  text-xl sm:text-3xl md:text-5xl  text-center max-w-4xl   leading-snug'>
 				{title}
-			</motion.h2>
-			<div className='flex flex-col md:flex-row gap-6 w-full'>
+			</motion.h1>
+			<div className='flex flex-col md:flex-row gap-6 w-full pt-16'>
 				<motion.div
 					id='intro'
 					initial={{ opacity: 0, scaleX: 0, x: "-50%" }}
 					animate={{ opacity: 1, scaleX: 1, x: 0 }}
 					transition={{ duration: 1 }}
-					className=' text-lg  md:w-2/3 border-t-2 border-neutral'>
-					<motion.div
+					className=' md:w-2/3    '>
+					<motion.h2
 						initial={{ opacity: 0, y: "20px" }}
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ duration: 1, delay: 1 }}
-						className='font-bold text-lg pb-2 '>
+						className='  w-full '>
 						Overview
-					</motion.div>
+					</motion.h2>
 
-					<motion.div
+					<motion.p
 						initial={{ opacity: 0, y: "20px" }}
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ duration: 1, delay: 1.4 }}
 						className=' '>
-						{intro}
-					</motion.div>
+						{intro.split("/").map((line) => (
+							<span className='w-full'>{line}</span>
+						))}
+					</motion.p>
 				</motion.div>
 
-				<div className=' flex flex-col sm:flex-row md:flex-col justify-between gap-8 w-full md:w-1/3'>
+				<div className='flex flex-col sm:flex-row md:flex-col  gap-4 w-full md:w-1/3'>
 					<motion.div
 						initial={{ opacity: 0, scaleX: 0, x: "-50%" }}
 						animate={{ opacity: 1, scaleX: 1, x: 0 }}
 						transition={{ duration: 1, delay: 1 }}
-						className=' text-lg border-t-2 border-neutral w-full'>
+						className='  w-full  '>
 						<motion.div
 							initial={{ opacity: 0 }}
 							animate={{ opacity: 1 }}
 							transition={{ duration: 1, delay: 2 }}>
-							<div className='font-bold text-lg pb-2 '>Roles</div>
+							<h2 className=' pb-4 '>Roles</h2>
 						</motion.div>
 						{role.map((d, i) => (
 							<motion.div
@@ -53,7 +55,7 @@ export default function ProjHeader({ title, intro, role, client, sector }: { tit
 								initial={{ opacity: 0, y: "20px" }}
 								animate={{ opacity: 1, y: 0 }}
 								transition={{ duration: 1, delay: 2 }}>
-								<div className=''>{d}</div>
+								<span>{d}</span>
 							</motion.div>
 						))}
 					</motion.div>
@@ -61,12 +63,12 @@ export default function ProjHeader({ title, intro, role, client, sector }: { tit
 						initial={{ opacity: 0, scaleX: 0, x: "-50%" }}
 						animate={{ opacity: 1, scaleX: 1, x: 0 }}
 						transition={{ duration: 1, delay: 1.2 }}
-						className=' text-lg border-t-2 border-neutral w-full'>
+						className='w-full '>
 						<motion.div
 							initial={{ opacity: 0 }}
 							animate={{ opacity: 1 }}
 							transition={{ duration: 1, delay: 2.2 }}>
-							<div className='font-bold text-lg pb-2 '>Sector</div>
+							<h2 className=' pb-4'>Sector</h2>
 						</motion.div>
 						{sector.map((d, i) => (
 							<motion.div
@@ -74,7 +76,7 @@ export default function ProjHeader({ title, intro, role, client, sector }: { tit
 								initial={{ opacity: 0, y: "20px" }}
 								animate={{ opacity: 1, y: 0 }}
 								transition={{ duration: 1, delay: 2.2 }}>
-								<div className=''>{d}</div>
+								<span>{d}</span>
 							</motion.div>
 						))}
 					</motion.div>
@@ -83,37 +85,18 @@ export default function ProjHeader({ title, intro, role, client, sector }: { tit
 						initial={{ opacity: 0, scaleX: 0, x: "-50%" }}
 						animate={{ opacity: 1, scaleX: 1, x: 0 }}
 						transition={{ duration: 1, delay: 1.4 }}
-						className=' text-lg border-t-2 border-neutral w-full'>
+						className='w-full '>
 						<motion.div
 							initial={{ opacity: 0 }}
 							animate={{ opacity: 1 }}
 							transition={{ duration: 1, delay: 2.4 }}>
-							<div className='font-bold text-lg pb-2 '>Client</div>
+							<h2 className='  pb-4 '>Year</h2>
 						</motion.div>
 						<motion.div
 							initial={{ opacity: 0, y: "20px" }}
 							animate={{ opacity: 1, y: 0 }}
 							transition={{ duration: 1, delay: 2.4 }}>
-							<div className=''>Datadis</div>
-						</motion.div>
-					</motion.div>
-
-					<motion.div
-						initial={{ opacity: 0, scaleX: 0, x: "-50%" }}
-						animate={{ opacity: 1, scaleX: 1, x: 0 }}
-						transition={{ duration: 1, delay: 1.6 }}
-						className=' text-lg border-t-2 border-neutral w-full'>
-						<motion.div
-							initial={{ opacity: 0 }}
-							animate={{ opacity: 1 }}
-							transition={{ duration: 1, delay: 2.6 }}>
-							<div className='font-bold text-lg pb-2 '>Date</div>
-						</motion.div>
-						<motion.div
-							initial={{ opacity: 0, y: "20px" }}
-							animate={{ opacity: 1, y: 0 }}
-							transition={{ duration: 1, delay: 2.6 }}>
-							<div className=''>2022</div>
+							<p>2022</p>
 						</motion.div>
 					</motion.div>
 				</div>
