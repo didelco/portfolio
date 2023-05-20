@@ -31,8 +31,12 @@ export default function ProjHeader({ title, intro, role, sector }: { title: stri
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ duration: 1, delay: 1.4 }}
 						className=' '>
-						{intro.split("/").map((line) => (
-							<span className='w-full'>{line}</span>
+						{intro.split("/").map((line, i) => (
+							<span
+								key={"intro-line-" + i}
+								className='w-full'>
+								{line}
+							</span>
 						))}
 					</motion.p>
 				</motion.div>

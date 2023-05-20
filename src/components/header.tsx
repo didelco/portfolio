@@ -4,6 +4,7 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import Link from "next/link";
 import Line from "@/components/line";
+import SwitchTheme from "@/components/themeSwitch";
 
 export default function Header() {
 	const pathname = usePathname();
@@ -22,7 +23,7 @@ export default function Header() {
 				delay={1}
 				b={true}
 			/>
-			<div className='my-4'>
+			<div className='my-4 flex justify-between'>
 				<ul className='flex gap-16 '>
 					{menu.map((item) => (
 						<li
@@ -46,6 +47,7 @@ export default function Header() {
 						</li>
 					))}
 				</ul>
+				<SwitchTheme />
 			</div>
 		</div>
 	);

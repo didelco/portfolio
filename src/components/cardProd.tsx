@@ -14,7 +14,7 @@ export default function CardProject({
 		desc?: string;
 		exp?: boolean;
 		year?: number;
-		tags?: string[];
+		tags?: string;
 	};
 	i: number;
 	delay?: number;
@@ -41,7 +41,7 @@ export default function CardProject({
 
 			{d.tags && (
 				<div className='w-full flex  gap-1  flex-wrap-reverse'>
-					{d.tags.map((tag) => (
+					{d.tags.split("/").map((tag) => (
 						<a
 							href={`/work/tags/${tag.toLowerCase().replace(" ", "_")}`}
 							key={tag.replace(" ", "-")}>

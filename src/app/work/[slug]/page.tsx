@@ -2,6 +2,7 @@ import { getPostBySlug } from "@/lib/api";
 import markdownToHtml from "@/lib/md2html";
 import ProjHeader from "@/components/prodHeader";
 import Pains from "@/components/painPoints";
+import Image from "next/image";
 
 export default async function Post({ params }: { params: { slug: string } }) {
 	const post = getPostBySlug(params.slug, [
@@ -27,15 +28,16 @@ export default async function Post({ params }: { params: { slug: string } }) {
 	return (
 		<div className='flex flex-col items-center w-full'>
 			<div className='max-w-4xl my-16'>
-				<img
+				<Image
+					alt={"Main image " + post.title}
 					className='w-full p-16'
 					src={post.img_cover}
 				/>
 
 				<ProjHeader
 					title={post.desc}
-					role={post.tags != undefined ? post.tags : []}
-					sector={post.sector != undefined ? post.sector : []}
+					role={post.tags.split("/")}
+					sector={post.sector.split("/")}
 					client={post.client}
 					intro={post.overview}
 				/>
@@ -43,16 +45,16 @@ export default async function Post({ params }: { params: { slug: string } }) {
 					{post.context != undefined && (
 						<>
 							<h2>Context</h2>
-							{post.context.split("/").map((line) => (
-								<p>{line}</p>
+							{post.context.split("/").map((line, i) => (
+								<p key={"context-line-" + i}>{line}</p>
 							))}
 						</>
 					)}
 					{post.challenges != undefined && (
 						<>
 							<h2>Challenges</h2>
-							{post.challenges.split("/").map((line) => (
-								<p>{line}</p>
+							{post.challenges.split("/").map((line, i) => (
+								<p key={"challenges-line-" + i}>{line}</p>
 							))}
 						</>
 					)}
@@ -61,8 +63,8 @@ export default async function Post({ params }: { params: { slug: string } }) {
 					{post.solutions != undefined && (
 						<>
 							<h2>Solutions</h2>
-							{post.solutions.split("/").map((line) => (
-								<p>{line}</p>
+							{post.solutions.split("/").map((line, i) => (
+								<p key={"solutions-line-" + i}>{line}</p>
 							))}
 						</>
 					)}

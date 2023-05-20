@@ -2,8 +2,8 @@
 title: "Datadis"
 slug: "datadis"
 year: 2022
-sector: ['Energy']
-tags: ["UX", "Dataviz", "Service Design", "Energy"]
+sector: 'Energy'
+tags: "UX/Dataviz/Service Design/Energy"
 client: 'Datadis'
 desc: "#Energy control dashboard for homes and companies"
 color: "[#c084fc;]"
