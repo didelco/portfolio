@@ -16,12 +16,13 @@ blockquote {
 }
 
 h1 {
-  @apply text-6xl mt-12 mb-4 leading-snug;
+  @apply text-6xl mt-12 mb-4  font-semibold leading-tight;
 }
 
 h2 {
   @apply w-full border-neutral border-t-4 pt-4 overflow-visible  text-3xl mt-8  leading-snug;
 }
+
 h2.noline {
   @apply w-full  border-none   text-3xl mt-0  leading-snug;
 }

@@ -3,7 +3,10 @@ import { Inter } from "next/font/google";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({
+	subsets: ["latin"],
+	variable: "--font-inter",
+});
 
 export const metadata = {
 	title: "Chema Diez del Corral",
@@ -15,10 +18,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 		<html
 			lang='en'
 			data-theme='light'>
-			<body className={`${inter.className} overflow-x-hidden`}>
+			<body className={`${inter.variable}   overflow-x-hidden`}>
 				<main className='w-screen flex  items-center flex-col min-h-screen'>
 					<div className='px-8 md:px-16 lg:px-24 xl:px-48 pt-4 md:pt-6 lg:pt-8 w-full'>
-						<Header />
+						<Header/>
 						{children}
 						<div className='fixed w-6 h-6  bottom-0 right-0'>
 							<div className='w-0 h-0 -rotate-90'>

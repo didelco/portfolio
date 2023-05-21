@@ -3,7 +3,7 @@ import Line from '@/components/line'
 
 export default function Footer() {
 	return (
-		<div className='w-full my-16'>
+		<div className='w-full mt-16 mb-8'>
 			<Line />
 			<div className='w-full flex justify-between pt-6'>
 				<div className='flex w-full gap-16'>

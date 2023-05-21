@@ -1,7 +1,7 @@
 "use client";
-import { motion } from "framer-motion";
+import { motion, useScroll } from "framer-motion";
 import Link from "next/link";
-import Line from "@/components/line";
+import { useRef } from "react";
 
 export default function CardProject({
 	d,
@@ -20,12 +20,19 @@ export default function CardProject({
 	delay?: number;
 }) {
 
+	const ref = useRef(null);
+	const { scrollYProgress } = useScroll({
+		target: ref,
+		offset: ["start end", "start start"],
+	});
+
 	return (
 		<motion.div
 			key={i}
 			initial={{ opacity: 0, y: "100px" }}
-			animate={{ opacity: 1, y: 0 }}
+			whileInView={{ opacity: 1, y: 0 }}
 			transition={{ duration: 0.8, delay: delay + i * 0.3, ease: "circOut" }}
+			viewport={{ once: true }}
 			className={`w-full max-md:max-w-md flex flex-col ${i % 2 == 0 ? "md:flex-row" : "md:flex-row-reverse"}  md:justify-between gap-4 md:gap-16`}>
 			<Link
 				className='w-full cursor-pointer'
@@ -38,10 +45,10 @@ export default function CardProject({
 					<p className='p-0 m-0 '>
 						{d.title} <span className='text-gray-500 '>({d.year})</span>
 					</p>
-					<h2 className={`w-full text-2xl noline p-0 max-md:pr-4`}>{d.desc}</h2>
+					<h2 className={`w-full text-2xl noline p-0 m-0 max-md:pr-4`}>{d.desc}</h2>
 					<div className={`w-full flex justify-end ${i % 2 == 0 ? "md:justify-start" : ""}`}>
 						<Link
-							className='pl-6 stroke-neutral hover:stroke-neutral-content cursor-pointer text-sm flex items-center gap-2 btn btn-outline border-2 btn-neutral  rounded-none hover:bg-neutral hover:border-neutral'
+							className='pl-6 mt-2 stroke-neutral hover:stroke-neutral-content cursor-pointer text-sm flex items-center gap-2 btn btn-outline border-2 btn-neutral  rounded-none hover:bg-neutral hover:border-neutral'
 							href={`/work/` + d.slug}>
 							View Product{" "}
 							<svg
@@ -62,3 +69,11 @@ export default function CardProject({
 		</motion.div>
 	);
 }
+
+
+
+
+
+
+
+

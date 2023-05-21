@@ -37,7 +37,7 @@ console.log(selected)
 							<Link
 								href={item.url}
 								onClick={() => setSelected(item.name)}
-								className={`h-10 flex items-center text-2xl ${rutas[0] == item.url.slice(1) ? "font-semibold" : "font-light"}`}>
+								className={`museo h-10 flex items-center text-2xl ${rutas[0] == item.url.slice(1) ? "font-semibold" : "font-light"}`}>
 								{item.name}
 							</Link>
 							{item.name === selected ? (
