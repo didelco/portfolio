@@ -19,7 +19,7 @@ export default function CardProject({
 	i: number;
 	delay?: number;
 }) {
-	console.log(d);
+
 	return (
 		<motion.div
 			key={i}

@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Line from "@/components/line";
 import SwitchTheme from "@/components/themeSwitch";
@@ -9,9 +9,13 @@ import SwitchTheme from "@/components/themeSwitch";
 export default function Header() {
 	const pathname = usePathname();
 	const rutas = pathname.split("/").slice(1);
-
 	const [selected, setSelected] = useState(rutas[0]);
-	console.log(rutas);
+
+    useEffect(() => {
+const name = pathname.split("/").slice(1)[0] == '' ? 'home' :pathname.split("/").slice(1)[0];
+		setSelected(name);
+		}, [pathname]);
+console.log(selected)
 	const menu = [
 		{ name: "home", url: "/" },
 		{ name: "work", url: "/work" },
@@ -23,8 +27,9 @@ export default function Header() {
 				delay={1}
 				b={true}
 			/>
-			<div className='my-4 flex justify-between'>
-				<ul className='flex gap-16 '>
+			<div className='my-4 flex justify-between items-center'>
+				<div className=' hidden sm:block  text-2xl w-full'>CDDC</div>
+				<ul className='flex gap-4 sm:gap-8 md:gap-16 w-full justify-start sm:justify-center'>
 					{menu.map((item) => (
 						<li
 							key={item.name}
@@ -37,7 +42,6 @@ export default function Header() {
 							</Link>
 							{item.name === selected ? (
 								<>
-									{console.log("move")}
 									<motion.div
 										className='w-full absolute h-1  bg-neutral'
 										layoutId='underline'
@@ -47,7 +51,13 @@ export default function Header() {
 						</li>
 					))}
 				</ul>
-				<SwitchTheme />
+				<motion.div
+					initial={{ opacity: 0, scale: 0 }}
+					animate={{ opacity: 1, scale: 1 }}
+					transition={{ duration: 0.5, delay: 1.8 }}
+					className='w-full flex justify-end items-center mr-2'>
+					<SwitchTheme />
+				</motion.div>
 			</div>
 		</div>
 	);

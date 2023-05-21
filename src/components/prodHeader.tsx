@@ -8,16 +8,16 @@ export default function ProjHeader({ title, intro, role, sector }: { title: stri
 				initial={{ opacity: 0, y: "20px" }}
 				animate={{ opacity: 1, y: 0 }}
 				transition={{ duration: 1 }}
-				className='font-bold  text-xl sm:text-3xl md:text-5xl  text-center max-w-4xl   leading-snug'>
+				className=''>
 				{title}
 			</motion.h1>
-			<div className='flex flex-col md:flex-row gap-6 w-full pt-16'>
+			<div className='flex flex-col md:flex-row gap-6 w-full pt-8'>
 				<motion.div
 					id='intro'
 					initial={{ opacity: 0, scaleX: 0, x: "-50%" }}
 					animate={{ opacity: 1, scaleX: 1, x: 0 }}
 					transition={{ duration: 1 }}
-					className=' md:w-2/3    '>
+					className=' md:w-2/3   '>
 					<motion.h2
 						initial={{ opacity: 0, y: "20px" }}
 						animate={{ opacity: 1, y: 0 }}

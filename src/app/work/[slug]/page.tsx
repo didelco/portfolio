@@ -1,34 +1,23 @@
+
+
 import { getPostBySlug } from "@/lib/api";
 import markdownToHtml from "@/lib/md2html";
 import ProjHeader from "@/components/prodHeader";
 import Pains from "@/components/painPoints";
 import Image from "next/image";
 
+
 export default async function Post({ params }: { params: { slug: string } }) {
-	const post = getPostBySlug(params.slug, [
-		"title",
-		"desc",
-		"tags",
-		"sector",
-		"pains",
-		"content",
-		"img_cover",
-		"overview",
-		"context",
-		"challenges",
-		"solutions",
-		"deepdive",
-		"finish",
-	]);
+	const post = getPostBySlug(params.slug, ["title", "desc", "tags", "sector", "pains", "content", "img_cover", "context", "challenges", "solutions", "deepdive", "finish"]);
 
 	const content = await markdownToHtml(post.content || "");
-	console.log(post.content);
-	console.log(post.context);
 
 	return (
 		<div className='flex flex-col items-center w-full'>
 			<div className='max-w-4xl my-16'>
 				<Image
+					width={640}
+					height={480}
 					alt={"Main image " + post.title}
 					className='w-full p-16'
 					src={post.img_cover}
@@ -39,17 +28,9 @@ export default async function Post({ params }: { params: { slug: string } }) {
 					role={post.tags.split("/")}
 					sector={post.sector.split("/")}
 					client={post.client}
-					intro={post.overview}
+					intro={post.context}
 				/>
 				<div className='flex flex-col items-end gap-4'>
-					{post.context != undefined && (
-						<>
-							<h2>Context</h2>
-							{post.context.split("/").map((line, i) => (
-								<p key={"context-line-" + i}>{line}</p>
-							))}
-						</>
-					)}
 					{post.challenges != undefined && (
 						<>
 							<h2>Challenges</h2>
@@ -86,3 +67,6 @@ export default async function Post({ params }: { params: { slug: string } }) {
 		</div>
 	);
 }
+
+
+
