@@ -20,6 +20,7 @@ export default function Home() {
 				className='mt-2  text-2xl md:text-4xl font-light   '>
 				Product Designer & Data Visualization
 			</motion.div>
+			
 
 			<div className='w-full h-48'></div>
 			<Line
@@ -32,7 +33,9 @@ export default function Home() {
 				transition={{ duration: 1, delay: 2 }}
 				className=''>
 				<h2 className='noline'>Featured works</h2>
-				<Link href={'/work'}><p>view more</p></Link>
+				<Link href={"/work"}>
+					<p>view more</p>
+				</Link>
 			</motion.div>
 		</div>
 	);

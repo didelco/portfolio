@@ -30,7 +30,7 @@ export default function CardProject({
 			<Link
 				className='w-full cursor-pointer'
 				href={`/work/` + d.slug}>
-				<div className=' aspect-square  bg-pink-200 hover:bg-red-300 transition-colors' />
+				<div className='  aspect-video  bg-pink-200 hover:bg-red-300 transition-colors' />
 			</Link>
 
 			<div className={`w-full flex flex-col  justify-center ${i % 2 == 0 ? " items-start" : "  md:items-end"}`}>
@@ -41,14 +41,14 @@ export default function CardProject({
 					<h2 className={`w-full text-2xl noline p-0 max-md:pr-4`}>{d.desc}</h2>
 					<div className={`w-full flex justify-end ${i % 2 == 0 ? "md:justify-start" : ""}`}>
 						<Link
-							className=' cursor-pointer text-sm flex items-center gap-2 btn btn-outline btn-neutral  rounded-none'
+							className='pl-6 stroke-neutral hover:stroke-neutral-content cursor-pointer text-sm flex items-center gap-2 btn btn-outline border-2 btn-neutral  rounded-none hover:bg-neutral hover:border-neutral'
 							href={`/work/` + d.slug}>
-							go to project{" "}
+							View Product{" "}
 							<svg
 								xmlns='http://www.w3.org/2000/svg'
-								className=' stroke-neutral  w-8 h-8'
+								className=' w-8 h-8'
 								viewBox='0 0 24 24'
-								stroke-width='1'
+								stroke-width='1.5'
 								stroke-linecap='square'
 								stroke-linejoin='square'>
 								<path d='M5 12l14 0'></path>

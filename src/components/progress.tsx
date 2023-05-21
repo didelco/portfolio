@@ -1,20 +1,22 @@
-import { motion, useScroll } from "framer-motion";
+'use client'
+import { motion, useScroll, easeIn } from "framer-motion";
 
 export default function Progress() {
 	const { scrollYProgress } = useScroll();
 	return (
-		<section className='w-full py-8'>
+		<div
+			id='progress'
+			className=''>
+		
 			<motion.div
 				id='animated'
-				className='w-full h-4 bg-neutral fixed top-0 left-0'
-				initial={{ scaleX:0,  y: "-50vw" }}
-				animate={{ scaleX: scrollYProgress, y: "calc(-50vw + scrollYProgress * 50vw)" }}
-				whileInView={{ opacity: 1, y: 0 }}
+				className='fixed top-0 left-0 right-0 h-2 bg-neutral origin-left '
 				transition={{ duration: 1, delay: 0.5, ease: easeIn }}
-				viewport={{ once: true }}
-				className={`w-full flex flex-col gap-3  justify-between items-center`}
-				// style={{ opacity: scrollYProgress }}
+				style={{ scaleX: scrollYProgress }}
 			/>
-		</section>
+		</div>
 	);
 }
+
+
+

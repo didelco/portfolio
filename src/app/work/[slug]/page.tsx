@@ -5,6 +5,7 @@ import markdownToHtml from "@/lib/md2html";
 import ProjHeader from "@/components/prodHeader";
 import Pains from "@/components/painPoints";
 import Image from "next/image";
+import Progress from "@/components/progress";
 
 
 export default async function Post({ params }: { params: { slug: string } }) {
@@ -14,6 +15,7 @@ export default async function Post({ params }: { params: { slug: string } }) {
 
 	return (
 		<div className='flex flex-col items-center w-full'>
+			<Progress />
 			<div className='max-w-4xl my-16'>
 				<Image
 					width={640}

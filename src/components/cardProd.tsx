@@ -35,7 +35,7 @@ export default function CardProject({
 			<Link
 				className='w-full'
 				href={`/work/` + d.slug}>
-				<div className='w-full h-96 bg-pink-200 hover:bg-red-300 transition-colors'></div>
+				<div className='w-full aspect-video bg-pink-200 hover:bg-red-300 transition-colors'></div>
 			</Link>
 			<p className={`w-full`}>{d.desc}</p>
 

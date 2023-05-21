@@ -3,14 +3,82 @@
 import { easeIn, motion, useScroll } from "framer-motion";
 import { useRef } from "react";
 
-function Item() {
-  const ref = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start end", "start start"]
-  });
+export default function About() {
+	return (
+		<div className=' pt-16 w-full flex gap-32'>
+			<div className='w-2/3'>
+				<h1>Hello! I am Chema, a product designer and a creative technologist</h1>
 
-  return (
+				<div className='py-12 text-lg   max-w-xl'>
+					Senior Product Designer and Creative Technologist with 12+ years of experience. <br />
+					<br />I Design Digital Tools and Products in various sectors (Energy, proptech, Retail, Banking, IoT and more). <br /> I am comfortable in projects with a high level of
+					uncertainty and products with complex business logic. I studied Architecture, I am a passionate maker and a data visualisation geek. I define myself as a creative and
+					curious person who loves to teach and learn. I have worked remotely with clients from multiple countries in both Spanish and English. Some clients I have worked with are
+					Tesco (UK), Solera (USA), Santander (Spain), Telefónica (Spain), Megaton (Russia), Datadis (Spain), UrbanData Analytics (Spain), Lledó (Spain) among others. <br /> <br />{" "}
+					A deep understanding of the problems, a wide knowledge of technology and a creative vision is what I bring to create products that contribute to a more sustainable future
+					and improve people`s lives.
+				</div>
+
+				<Item />
+				<Item />
+				<Item />
+				<Item />
+				<Item />
+				<Item />
+				<Item />
+				<Item />
+				<Item />
+				<Item />
+				<Item />
+				<Item />
+			</div>
+			<div className='w-1/3'>
+				<h1>Hello! I am Chema, a product designer and a creative technologist</h1>
+
+				<div className='py-12 text-lg   max-w-xl'>
+					Senior Product Designer and Creative Technologist with 12+ years of experience. <br />
+					<br />I Design Digital Tools and Products in various sectors (Energy, proptech, Retail, Banking, IoT and more). <br /> I am comfortable in projects with a high level of
+					uncertainty and products with complex business logic. I studied Architecture, I am a passionate maker and a data visualisation geek. I define myself as a creative and
+					curious person who loves to teach and learn. I have worked remotely with clients from multiple countries in both Spanish and English. Some clients I have worked with are
+					Tesco (UK), Solera (USA), Santander (Spain), Telefónica (Spain), Megaton (Russia), Datadis (Spain), UrbanData Analytics (Spain), Lledó (Spain) among others. <br /> <br />{" "}
+					A deep understanding of the problems, a wide knowledge of technology and a creative vision is what I bring to create products that contribute to a more sustainable future
+					and improve people`s lives.
+				</div>
+
+				<div className='py-12 text-lg   max-w-xl'>
+					Senior Product Designer and Creative Technologist with 12+ years of experience. <br />
+					<br />I Design Digital Tools and Products in various sectors (Energy, proptech, Retail, Banking, IoT and more). <br /> I am comfortable in projects with a high level of
+					uncertainty and products with complex business logic. I studied Architecture, I am a passionate maker and a data visualisation geek. I define myself as a creative and
+					curious person who loves to teach and learn. I have worked remotely with clients from multiple countries in both Spanish and English. Some clients I have worked with are
+					Tesco (UK), Solera (USA), Santander (Spain), Telefónica (Spain), Megaton (Russia), Datadis (Spain), UrbanData Analytics (Spain), Lledó (Spain) among others. <br /> <br />{" "}
+					A deep understanding of the problems, a wide knowledge of technology and a creative vision is what I bring to create products that contribute to a more sustainable future
+					and improve people`s lives.
+				</div>
+
+				<div className='py-12 text-lg   max-w-xl'>
+					Senior Product Designer and Creative Technologist with 12+ years of experience. <br />
+					<br />I Design Digital Tools and Products in various sectors (Energy, proptech, Retail, Banking, IoT and more). <br /> I am comfortable in projects with a high level of
+					uncertainty and products with complex business logic. I studied Architecture, I am a passionate maker and a data visualisation geek. I define myself as a creative and
+					curious person who loves to teach and learn. I have worked remotely with clients from multiple countries in both Spanish and English. Some clients I have worked with are
+					Tesco (UK), Solera (USA), Santander (Spain), Telefónica (Spain), Megaton (Russia), Datadis (Spain), UrbanData Analytics (Spain), Lledó (Spain) among others. <br /> <br />{" "}
+					A deep understanding of the problems, a wide knowledge of technology and a creative vision is what I bring to create products that contribute to a more sustainable future
+					and improve people`s lives.
+				</div>
+			</div>
+		</div>
+	);
+}
+
+
+
+function Item() {
+	const ref = useRef(null);
+	const { scrollYProgress } = useScroll({
+		target: ref,
+		offset: ["start end", "start start"],
+	});
+
+	return (
 		<section className='w-full py-8'>
 			<div
 				ref={ref}
@@ -34,57 +102,6 @@ function Item() {
 	);
 }
 
-
-
-export default function Me({ params }: { params: string }) {
-	return (
-		<div className=' pt-16 w-full'>
-			
-			<div className='mt-16 text-6xl  font-bold'>Chema Diez del Corral</div>
-			<div className='mt-2  font-light text-4xl'>Product Designer & Creative Technologist</div>
-			<div className='py-12 text-lg   max-w-xl'>
-				Senior Product Designer and Creative Technologist with 12+ years of experience. <br />
-				<br />I Design Digital Tools and Products in various sectors (Energy, proptech, Retail, Banking, IoT and more). <br /> I am comfortable in projects with a high level of
-				uncertainty and products with complex business logic. I studied Architecture, I am a passionate maker and a data visualisation geek. I define myself as a creative and
-				curious person who loves to teach and learn. I have worked remotely with clients from multiple countries in both Spanish and English. Some clients I have worked with are
-				Tesco (UK), Solera (USA), Santander (Spain), Telefónica (Spain), Megaton (Russia), Datadis (Spain), UrbanData Analytics (Spain), Lledó (Spain) among others. <br /> <br /> A
-				deep understanding of the problems, a wide knowledge of technology and a creative vision is what I bring to create products that contribute to a more sustainable future and
-				improve people`s lives.
-			</div>
-			
-			<div className='py-12 text-lg   max-w-xl'>
-				Senior Product Designer and Creative Technologist with 12+ years of experience. <br />
-				<br />I Design Digital Tools and Products in various sectors (Energy, proptech, Retail, Banking, IoT and more). <br /> I am comfortable in projects with a high level of
-				uncertainty and products with complex business logic. I studied Architecture, I am a passionate maker and a data visualisation geek. I define myself as a creative and
-				curious person who loves to teach and learn. I have worked remotely with clients from multiple countries in both Spanish and English. Some clients I have worked with are
-				Tesco (UK), Solera (USA), Santander (Spain), Telefónica (Spain), Megaton (Russia), Datadis (Spain), UrbanData Analytics (Spain), Lledó (Spain) among others. <br /> <br /> A
-				deep understanding of the problems, a wide knowledge of technology and a creative vision is what I bring to create products that contribute to a more sustainable future and
-				improve people`s lives.
-			</div>
-		 <Item />
-      <Item />
-      <Item />
-      <Item />
-      <Item />
-      <Item />
-      <Item />
-      <Item />
-      <Item />
-      <Item />
-      <Item />
-      <Item />
-			<div className='py-12 text-lg   max-w-xl'>
-				Senior Product Designer and Creative Technologist with 12+ years of experience. <br />
-				<br />I Design Digital Tools and Products in various sectors (Energy, proptech, Retail, Banking, IoT and more). <br /> I am comfortable in projects with a high level of
-				uncertainty and products with complex business logic. I studied Architecture, I am a passionate maker and a data visualisation geek. I define myself as a creative and
-				curious person who loves to teach and learn. I have worked remotely with clients from multiple countries in both Spanish and English. Some clients I have worked with are
-				Tesco (UK), Solera (USA), Santander (Spain), Telefónica (Spain), Megaton (Russia), Datadis (Spain), UrbanData Analytics (Spain), Lledó (Spain) among others. <br /> <br /> A
-				deep understanding of the problems, a wide knowledge of technology and a creative vision is what I bring to create products that contribute to a more sustainable future and
-				improve people`s lives.
-			</div>
-		</div>
-	);
-}
 
 
 
