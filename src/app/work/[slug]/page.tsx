@@ -16,14 +16,14 @@ export default async function Post({ params }: { params: { slug: string } }) {
 	return (
 		<div className='flex flex-col items-center w-full'>
 			<Progress />
-			<div className='max-w-4xl my-16'>
+			<div className='  max-w-4xl my-16'>
+				<div className="relative w-full aspect-video">
 				<Image
-					width={640}
-					height={480}
+					fill={true}
 					alt={"Main image " + post.title}
-					className='w-full p-16'
+					className='w-full'
 					src={post.img_cover}
-				/>
+				/></div>
 
 				<ProjHeader
 					title={post.desc}

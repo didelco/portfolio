@@ -5,24 +5,34 @@ year: 2017
 sector: 'Industry'
 tags: "UX/UI/Service Design/Digital transformation"
 client: 'Lledó'
-desc: "proyecto estratégico de transformación digital y rediseño de una marca de iluminación"
+desc: "Redesign and digital transformation of a lighting brand"
 color: "[#404040;]"
 colort: "[#fff;]"
-pains: 'Poca estandarización, gran catalogo de productos hechos a medida./Imagen de marca fragmentada./poco adaptado a las necesidades del cliente final.'
+pains: 'Difficult catalog to sell online because it has many customized products. / It does not reach its target, people interested in quality and design / Positioning itself in a saturated market'
 img_cover: '/photos/lledo_portada.jpg'
 img_portada: '/photos/lledo_portada.jpg'
-context: 'Lledó es una una empresa de diseño y fabricación de luminarias para arquitectura con una gran experiencia.
-Tienen un amplio catálogo de productos para múltiples soluciones enfocado generalmente a un público más profesional que exige una alta calidad y que se adapten a sus necesidades.'
-challenges: 'Tras tantos años en el en el sector se han producido diversas fusiones compras y participaciones con otras empresas lo que hacía una marca fragmentada/
-Siempre se han enfrentado a un cliente profesional que exigía un producto de calidad y muy personalizado pidiendo presupuestos de grandes unidades y negociando el precio individualmente ahora sin embargo el objetivo es también acercarse al cliente final para lo cual deben poder ofrecer un catálogo estandarizado con precios definidos y competitivos/
-El cliente final al que quieren dirigirse ahora que es cualquier persona un poco interesada por una luminaria de más calidad es un cliente que no conoce la marca y muchas veces y muchas veces tampoco conoce bien las características de los productos por lo que requiere de una cierta formación y acompañarle en todo el proceso de selección de la luminaria/
-La forma de navegar el catálogo para un cliente que no tiene esa formación y ese conocimiento es bastante complejo y de hecho la mayor de la mayoría de las veces también abrumador el argumento para elegir una luminaria sobre otra depende de cosas muy técnicas que tampoco se pueden obviar porque es justo la ventaja competitiva que ofrece lledo a sus clientes respecto a otras luminarias más genéricas.'
-solutions: 'Para acercarnos más a un cliente final menos profesional intentamos mostrar las luminarias de una forma que fuera más familiar para el propio cliente creando una especie de Pinterest en el cual podían ver los efectos lumínicos que se podían producir con diferentes luminarias y luego decirle que iluminaria es la que produce ese efecto lumínico otra de las estrategias que llevamos a cabo fue crear configuradores que nos ayudaban a personalizar todos los aspectos de una luminaria concreta haciendo mucho más fácil de navegar que por un catálogo de referencias donde todos los productos parecen iguales en el configurador además de una visualización en tiempo real de el producto elegido también podíamos dar pequeños tips explicando las diferencias que conllevaba cada una de las decisiones./ Para poder hacer este configurador primero tuvimos que hacer cambios internos en la propia organización para estandarizar cientos ciertos productos que hasta el momento se hacían así como establecer una política de precios y pedidos mínimos para cada una de las combinaciones./
-también le dimos un repaso a la marca haciéndole tener una apariencia más moderna y más cercana a las expectativas de los nuevos clientes que básicamente son personas interesadas por la iluminación pero que tienen poco conocimiento así como pequeños estudios de arquitectura hoy diseño de interior que no tienen un gran expertis sobre iluminación.'
-external: "https://datadis.es"
+context: 'Since 1958 Lledó is a company with extensive experience in the design and manufacture of luminaires for architecture.
+They have a wide catalog of products that can be adapted to the needs of the project, generally focused on a professional audience in the world of lighting that demands custom-made products, high-quality finishes and personalized service.'
+challenges: 'Currently in addition to the usual professional client with large orders, personalized products and individually negotiated prices, lledo now wants to expand its audience. Now they also want to approach smaller clients such as small architecture and decoration studios and even end clients who need advice, a well-defined catalog and prices on the web./The end customer who they also want to address from lledo needs more information on basic aspects of lighting and advice to know the different articles in the catalog and in which case to use each one./
+
+The way to navigate the current catalog is quite complex, even for the most professional clients. In fact most of the time the argument for choosing one luminaire over another depends on very technical and specific features that are difficult to find in the product sheets. In these technical specificities are the details that will make the difference compared to other more generic luminaires./These challenges were the insights that we obtained in a series of investigations, interviews and benchmarks with different types of stakeholders.'
+
+solutions: 'Once we knew from the research the archetype of people we were targeting and knowing where we wanted to position ourselves against the competition, we were able to find the actions that we had to execute:/
+
+- Reduce the offer of the catalog, standardizing the characteristics, fixed prices and establishing delivery time for online sales. In the usual channels you could continue with all the customization and normal procedure./
+- Facilitate the choice of luminaires with different tools./
+- Improving the perceived quality of the product: Improving the brand, creating inspiring quality content and help tools that allow us to better understand the advantages of Lledó luminaires/
+
+In order to empathize more with clients with less knowledge about lighting, we try to show the luminaires in a less technical way and carry out didactic work to teach the client the differences between the different characteristics so that they can choose the luminaire they need./
+
+For this work we created tools such as moodwalls with light effects similar to Pinterest, which is a well-known reference, but in this case only with light effects. Another of the tools were luminaire configurators to be able to navigate the catalog more easily, choosing the aesthetic characteristics and lighting properties that you need./
+
+Focusing on the target user of our platform, we also created specific sites such as Lledó Life or Sistemas lineares, which were independent sites, which showed only part of the lledo catalog but had a very clear value proposition offering more design and a selection of products. very specific for the users we are addressing.'
+external: "https://lledogrupo.com/"
 video: ""
 deepdive: true
 finish: false
 publish: true
-exp: true
+exp: false
+featured: true
 ---

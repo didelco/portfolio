@@ -28,6 +28,7 @@ deepdive: true
 finish: false
 publish: true
 exp: true
+featured: true
 ---
 import Line from '@/components/line'
 
