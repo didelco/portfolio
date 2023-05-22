@@ -3,7 +3,7 @@ import CardHome from '@/components/cardHome';
 import { getAllPosts } from "@/lib/api";
 
 export default function Home() {
-	const dataProjects = getAllPosts(["title", "slug", "desc", "exp", "year", "tags"]);
+	const dataProjects = getAllPosts(["title", "slug", "desc", "exp", "year", "img_portada", "tags"]);
 	const data = dataProjects.slice(0, 3);
 	return (
 		<div className='pt-16'>

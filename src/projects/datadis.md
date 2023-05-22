@@ -10,6 +10,7 @@ color: "[#c084fc;]"
 colort: "[#fff;]"
 pains: 'Complex user registration, users need to identify themselves to be verified./Data takes a long time to load. The user does not know what data exists or if there is an error./Messages are written from a legal perspective. Users do not understand them.'
 img_cover: '/photos/datadis_main.jpg'
+img_portada: '/photos/portada_datadis.jpg'
 context: 'The project is a Datadis website redesign./
 	The web consisted of two very different parts; the private web that was a tool that served users to see their consumption and manage permissions for access to their data and the other part was a public web that had a marketing purpose./Datadis is a platform created by distribution companies to simplify access to consumer data. Users can check all electrical contracts in your name from a single site, regardles of company contracted./
 When contacting us, they had a clear intention to improve the user experience of their website.'

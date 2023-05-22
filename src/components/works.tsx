@@ -2,7 +2,7 @@ import CardProject from "./cardProd";
 import { getAllPosts } from "@/lib/api";
 
 export default function Works({ max = 1000, maxCol = 3, filters = false, delay = 0 }: { max?: number; maxCol?: number; filters?: boolean; delay?: number }) {
-	const dataProjects = getAllPosts(["title", "slug", "desc", "exp", "year", "tags"]);
+	const dataProjects = getAllPosts(["title", "slug", "desc", "exp", "year", "tags", 'img_portada']);
 	const data = dataProjects.slice(0, max);
 	return (
 		<>

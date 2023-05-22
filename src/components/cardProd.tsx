@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Line from "@/components/line";
+import Image from "next/image";
 
 export default function CardProject({
 	d,
@@ -15,6 +16,8 @@ export default function CardProject({
 		exp?: boolean;
 		year?: number;
 		tags?: string;
+		img_portada?: string;
+
 	};
 	i: number;
 	delay?: number;
@@ -35,7 +38,17 @@ export default function CardProject({
 			<Link
 				className='w-full'
 				href={`/work/` + d.slug}>
-				<div className='w-full aspect-video bg-pink-200 hover:bg-red-300 transition-colors'></div>
+				<div className='relative w-full  aspect-video  bg-neutral transition-colors overflow-hidden'>
+					
+					{d.img_portada != null && (
+						<Image
+							fill={true}
+							alt={"Main image " + d.title}
+							className=' md:hover:scale-110 md:hover:-rotate-3 transition-transform ease-in-out md:hover:opacity-80'
+							src={d.img_portada}
+						/>
+					)}
+				</div>
 			</Link>
 			<p className={`w-full`}>{d.desc}</p>
 

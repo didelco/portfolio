@@ -2,6 +2,7 @@
 import { motion, useScroll } from "framer-motion";
 import Link from "next/link";
 import { useRef } from "react";
+import Image from "next/image";
 
 export default function CardProject({
 	d,
@@ -14,6 +15,7 @@ export default function CardProject({
 		desc?: string;
 		exp?: boolean;
 		year?: number;
+		img_portada?: string;
 		tags?: string;
 	};
 	i: number;
@@ -37,7 +39,15 @@ export default function CardProject({
 			<Link
 				className='w-full cursor-pointer'
 				href={`/work/` + d.slug}>
-				<div className='  aspect-video  bg-pink-200 hover:bg-red-300 transition-colors' />
+			
+				<div className='relative w-full  aspect-video  bg-neutral transition-colors overflow-hidden' > {d.img_portada != null && (
+					<Image
+						fill={true}
+						alt={"Main image " + d.title}
+						className=" md:hover:scale-110 md:hover:-rotate-3 transition-transform ease-in-out md:hover:opacity-80"
+						src={d.img_portada}
+					/>
+				)}</div>
 			</Link>
 
 			<div className={`w-full flex flex-col  justify-center ${i % 2 == 0 ? " items-start" : "  md:items-end"}`}>
