@@ -5,8 +5,8 @@ import { useRef } from "react";
 
 export default function About() {
 	return (
-		<div className=' pt-16 w-full flex gap-32'>
-			<div className='w-2/3'>
+		<div className=' pt-16 w-full flex flex-col md:flex-row gap-32'>
+			<div className='w-full md:w-2/3'>
 				<h1>Hello! I am Chema, a product designer and a creative technologist</h1>
 
 				<div className='py-12 text-lg   max-w-xl'>
@@ -32,7 +32,7 @@ export default function About() {
 				<Item />
 				<Item />
 			</div>
-			<div className='w-1/3'>
+			<div className='w-full md:w-1/3'>
 				<h2>Skills</h2>
 				<p>hola</p>
 				<h2>Skills</h2>

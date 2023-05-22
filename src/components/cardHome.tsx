@@ -58,7 +58,7 @@ export default function CardProject({
 					<h2 className={`w-full text-2xl noline p-0 m-0 max-md:pr-4`}>{d.desc}</h2>
 					<div className={`w-full flex justify-end ${i % 2 == 0 ? "md:justify-start" : ""}`}>
 						<Link
-							className='pl-6 mt-2 stroke-neutral hover:stroke-neutral-content cursor-pointer text-sm flex items-center gap-2 btn btn-outline border-2 btn-neutral  rounded-none hover:bg-neutral hover:border-neutral'
+							className='pl-2 md:pl-6 mt-2 stroke-neutral hover:stroke-neutral-content cursor-pointer text-sm flex items-center gap-2 btn btn-sm md:btn-md btn-ghost  md:btn-outline border-2 btn-neutral  rounded-none hover:bg-neutral hover:border-neutral'
 							href={`/work/` + d.slug}>
 							View Product{" "}
 							<svg

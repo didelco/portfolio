@@ -27,21 +27,21 @@ console.log(selected)
 				delay={1}
 				b={true}
 			/>
-			<div className='my-4 flex justify-between items-center'>
+			<div className=' my-2 md:my-4 flex justify-between items-center'>
 				<motion.div
 									initial={{ opacity: 0 }}
 									animate={{ opacity: 1 }}
 									transition={{ duration: 1, delay: 1.1 }}
-									className=' hidden sm:block  text-2xl w-full'>CDDC</motion.div>
+									className=' hidden sm:block text-2xl w-full'>CDDC</motion.div>
 				<ul className='flex gap-4 sm:gap-8 md:gap-16 w-full justify-start sm:justify-center'>
 					{menu.map((item, i) => (
 						<li
 							key={item.name}
-							className={`relative cursor-pointer text-2xl`}>
+							className={`relative cursor-pointer `}>
 							<Link
 								href={item.url}
 								onClick={() => setSelected(item.name)}
-								className={`museo h-10 flex items-center text-2xl ${rutas[0] == item.url.slice(1) ? "font-semibold" : "font-light"}`}>
+								className={` h-10 flex items-center text-xl md:text-2xl ${rutas[0] == item.url.slice(1) ? "font-semibold" : "font-light"}`}>
 								<motion.div
 									initial={{ opacity: 0 }}
 									animate={{ opacity: 1 }}
@@ -53,7 +53,6 @@ console.log(selected)
 								<>
 									<motion.div
 										className='w-full absolute h-1  bg-neutral'
-										
 									transition={{ duration: 1  }}
 										layoutId='underline'
 									/>

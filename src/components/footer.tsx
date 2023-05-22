@@ -5,7 +5,7 @@ export default function Footer() {
 	return (
 		<div className='w-full mt-16 mb-8'>
 			<Line />
-			<div className='w-full flex justify-between pt-6'>
+			<div className='w-full flex flex-col md:flex-row gap-6 justify-between pt-6'>
 				<div className='flex w-full gap-16'>
 					<div className='flex flex-col'>
 						<div className='footerTitle'>Design & Code </div>
