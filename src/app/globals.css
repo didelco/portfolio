@@ -24,7 +24,7 @@ h2 {
 }
 
 .noline {
-  @apply   border-none;
+  @apply   border-none mt-0;
 }
 
 h3 {
@@ -36,7 +36,10 @@ h3 {
 }
 
 .footerTitle{
-   @apply  text-lg  md:text-xl ;
+   @apply  text-sm   md:text-xl font-medium ;
+}
+.footerContent{
+   @apply  text-sm   md:text-lg w-auto font-light ;
 }
 
 }

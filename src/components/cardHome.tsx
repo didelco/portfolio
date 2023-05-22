@@ -31,9 +31,15 @@ export default function CardProject({
 	return (
 		<motion.div
 			key={i}
+			initial={{ opacity: 0 }}
+			animate={{ opacity: 1 }}
+			transition={{ duration: 1, delay: delay  }}
+			className="w-full">
+		<motion.div
+			key={i}
 			initial={{ opacity: 0, y: "100px" }}
 			whileInView={{ opacity: 1, y: 0 }}
-			transition={{ duration: 0.8, delay: delay + i * 0.3, ease: "circOut" }}
+			transition={{ duration: 0.8,  ease: "circOut" }}
 			viewport={{ once: true }}
 			className={`w-full max-md:max-w-md flex flex-col ${i % 2 == 0 ? "md:flex-row" : "md:flex-row-reverse"}  md:justify-between gap-4 md:gap-16`}>
 			<Link
@@ -51,14 +57,14 @@ export default function CardProject({
 			</Link>
 
 			<div className={`w-full flex flex-col  justify-center ${i % 2 == 0 ? " items-start" : "  md:items-end"}`}>
-				<div className={`flex flex-col gap-4 md:max-w-sm items-start text-left ${i % 2 == 0 ? "" : "md:items-end md:text-right"}`}>
+				<div className={`flex flex-col  gap-3 md:gap-4 md:max-w-sm items-start text-left ${i % 2 == 0 ? "" : "md:items-end md:text-right"}`}>
 					<p className='p-0 m-0 '>
 						{d.title} <span className='text-gray-500 '>({d.year})</span>
 					</p>
 					<h2 className={`w-full text-2xl noline p-0 m-0 max-md:pr-4`}>{d.desc}</h2>
 					<div className={`w-full flex justify-end ${i % 2 == 0 ? "md:justify-start" : ""}`}>
 						<Link
-							className='pl-2 md:pl-6 mt-2 stroke-neutral hover:stroke-neutral-content cursor-pointer text-sm flex items-center gap-2 btn btn-sm md:btn-md btn-ghost  md:btn-outline border-2 btn-neutral  rounded-none hover:bg-neutral hover:border-neutral'
+							className='pl-2 md:pl-6 md:mt-2 stroke-neutral hover:stroke-neutral-content cursor-pointer text-sm flex items-center gap-2 btn btn-sm md:btn-md btn-ghost  md:btn-outline border-2 btn-neutral  rounded-none hover:bg-neutral hover:border-neutral'
 							href={`/work/` + d.slug}>
 							View Product{" "}
 							<svg
@@ -76,6 +82,7 @@ export default function CardProject({
 					</div>
 				</div>
 			</div>
+		</motion.div>
 		</motion.div>
 	);
 }

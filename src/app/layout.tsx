@@ -11,13 +11,10 @@ const inter = Inter({
 export const metadata = {
 	title: "Chema Diez del Corral",
 	description: "Portfolio Prduct Designer & Creative Technologist",
-
-
   viewport: {
     width: 'device-width',
     initialScale: 1,
     maximumScale: 1,
-  
 }
 };
 

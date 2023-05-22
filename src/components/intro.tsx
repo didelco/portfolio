@@ -3,9 +3,9 @@ import { motion } from "framer-motion";
 import Line from "@/components/line";
 import Link from "next/link";
 
-export default function Home() {
+export default function Intro() {
 	return (
-		<div className='pt-8 md:pt-32'>
+		<div className='pt-8 md:pt-32 '>
 			<motion.h1
 				initial={{ opacity: 0, y: "50px" }}
 				animate={{ opacity: 1, y: 0 }}
