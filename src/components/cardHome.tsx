@@ -21,7 +21,6 @@ export default function CardProject({
 	i: number;
 	delay?: number;
 }) {
-
 	const ref = useRef(null);
 	const { scrollYProgress } = useScroll({
 		target: ref,

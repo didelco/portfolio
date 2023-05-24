@@ -57,7 +57,11 @@ export default function CardProject({
 						//	<a
 						//	href={`/work/tags/${tag.toLowerCase().replace(" ", "_")}`}
 						//	key={tag.replace(" ", "-")}>
-						<div className=' border-2 px-4 py rounded-2xl border-neutral'>{tag}</div>
+						<div
+							key={"tag-" + tag}
+							className=' border-2 px-4 py rounded-2xl border-neutral'>
+							{tag}
+						</div>
 						//</a>
 					))}{" "}
 				</div>
