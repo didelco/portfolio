@@ -3,7 +3,7 @@ import Line from '@/components/line'
 
 export default function Footer() {
 	return (
-		<div className='w-full mt-16 mb-4  md:mb-8'>
+		<div className='w-full mt-16 md:mt-48 xl:mt-64  mb-4  md:mb-8'>
 			<Line />
 			<div className='w-full flex flex-col md:flex-row gap-4 justify-between pt-4 md:pt-6'>
 				<div className='flex w-full gap-16'>

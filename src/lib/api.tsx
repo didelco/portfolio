@@ -10,9 +10,9 @@ export function getPostSlugs() {
 }
 
 export function getPostBySlug(slug: string, fields: string[] = []) {
-	const realSlug = slug.replace(/\.md$/, "");
+	const realSlug = slug.replace(/\.mdx$/, "");
 
-	const fullPath = join(postsDirectory, `${realSlug}.md`);
+	const fullPath = join(postsDirectory, `${realSlug}.mdx`);
 	const fileContents = fs.readFileSync(fullPath, "utf8");
 	const { data, content } = matter(fileContents);
 
@@ -41,9 +41,6 @@ export function getPostBySlug(slug: string, fields: string[] = []) {
 
 export function getAllPosts(fields: string[] = []) {
 	const slugs = getPostSlugs();
-	const posts = slugs
-		.map((slug) => getPostBySlug(slug, fields))
-		// sort posts by date in descending order
-		.sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
+	const posts = slugs.map((slug) => getPostBySlug(slug, fields)).sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
 	return posts;
 }

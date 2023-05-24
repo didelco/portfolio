@@ -1,7 +1,6 @@
 'use client'
-
-import { easeIn, motion, useScroll } from "framer-motion";
-import { useRef } from "react";
+import { motion } from "framer-motion";
+import Item from "@/components/item";
 
 export default function About() {
 	return (
@@ -29,15 +28,6 @@ export default function About() {
 				<Item />
 				<Item />
 				<Item />
-				<Item />
-				<Item />
-				<Item />
-				<Item />
-				<Item />
-				<Item />
-				<Item />
-				<Item />
-				<Item />
 			</div>
 			<div className='w-full md:w-1/3'>
 				<motion.div
@@ -47,7 +37,6 @@ export default function About() {
 					className=''>
 					<h2>Skills</h2>
 					<p>hola</p>
-					
 				</motion.div>
 				<motion.div
 					initial={{ opacity: 0, y: "50px" }}
@@ -56,7 +45,6 @@ export default function About() {
 					className=''>
 					<h2>Skills</h2>
 					<p>hola</p>
-					
 				</motion.div>
 				<motion.div
 					initial={{ opacity: 0, y: "50px" }}
@@ -65,51 +53,8 @@ export default function About() {
 					className=''>
 					<h2>Skills</h2>
 					<p>hola</p>
-					
 				</motion.div>
 			</div>
 		</div>
 	);
 }
-
-
-
-function Item() {
-	const ref = useRef(null);
-	const { scrollYProgress } = useScroll({
-		target: ref,
-		offset: ["start end", "start start"],
-	});
-
-	return (
-		<section className='w-full py-8'>
-			<div
-				ref={ref}
-				className='w-full'>
-				<motion.div
-					initial={{ opacity: 0, y: "300px" }}
-					whileInView={{ opacity: 1, y: 0 }}
-					transition={{ duration: 1, delay: 0.5, ease: easeIn }}
-					viewport={{ once: true }}
-					className={`w-full flex flex-col gap-3  justify-between items-center`}
-					// style={{ opacity: scrollYProgress }}
-				>
-					<div className='w-full flex justify-between items-center  '>
-						<h3>Superstudio</h3>
-						<h3 className='light'>2023</h3>
-					</div>
-					<div className='w-full h-96 bg-pink-200 hover:bg-red-300 transition-colors'></div>
-				</motion.div>
-			</div>
-		</section>
-	);
-}
-
-
-
-
-
-
-
-
-

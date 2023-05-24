@@ -25,7 +25,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 			data-theme='light'>
 			<body className={`${inter.variable}   overflow-x-hidden`}>
 				<main className='w-screen flex  items-center flex-col min-h-screen'>
-					<div className='px-6 sm:px-8 md:px-16 lg:px-24 xl:px-48 pt-4 md:pt-6 lg:pt-8 w-full'>
+					<div
+						id='layout'
+						className='px-6 sm:px-8 md:px-16 lg:px-24 xl:px-48 pt-4 md:pt-6 lg:pt-8 w-full'>
 						<Header />
 						{children}
 						<div className='hidden md:block fixed w-6 h-6  bottom-0 right-0'>

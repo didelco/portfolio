@@ -29,10 +29,12 @@ console.log(selected)
 			/>
 			<div className=' my-2 md:my-4 flex justify-between items-center'>
 				<motion.div
-									initial={{ opacity: 0 }}
-									animate={{ opacity: 1 }}
-									transition={{ duration: 1, delay: 1.1 }}
-									className=' hidden sm:block text-2xl w-full'>CDDC</motion.div>
+					initial={{ opacity: 0 }}
+					animate={{ opacity: 1 }}
+					transition={{ duration: 1, delay: 1.1 }}
+					className=' hidden sm:block text-2xl w-full'>
+					CDDC
+				</motion.div>
 				<ul className='flex gap-4 sm:gap-8 md:gap-16 w-full justify-start sm:justify-center'>
 					{menu.map((item, i) => (
 						<li
@@ -45,7 +47,7 @@ console.log(selected)
 								<motion.div
 									initial={{ opacity: 0 }}
 									animate={{ opacity: 1 }}
-									transition={{ duration: 1, delay: 1+ 0.2*i  }}>
+									transition={{ duration: 1, delay: 1 + 0.2 * i }}>
 									{item.name}
 								</motion.div>
 							</Link>
@@ -53,7 +55,7 @@ console.log(selected)
 								<>
 									<motion.div
 										className='w-full absolute h-1  bg-neutral'
-									transition={{ duration: 1  }}
+										transition={{ duration: 0.8, ease: "anticipate" }}
 										layoutId='underline'
 									/>
 								</>

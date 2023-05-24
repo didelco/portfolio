@@ -29,7 +29,7 @@ export default function CardProject({
 			initial={{ opacity: 0, y: "100px" }}
 			animate={{ opacity: 1, y: 0 }}
 			transition={{ duration: 0.8, delay: delay + i * 0.3, ease: "circOut" }}
-			className={`w-full flex flex-col     gap-3  justify-between items-center`}>
+			className={`w-full flex flex-col gap-4  justify-start items-center`}>
 			<Line delay={delay + 0.6 + i * 0.3} />
 			<div className='w-full flex justify-between items-center  '>
 				<h3>{d.title}</h3>
@@ -39,7 +39,6 @@ export default function CardProject({
 				className='w-full'
 				href={`/work/` + d.slug}>
 				<div className='relative w-full  aspect-video  bg-neutral transition-colors overflow-hidden'>
-					
 					{d.img_portada != null && (
 						<Image
 							fill={true}
@@ -53,13 +52,13 @@ export default function CardProject({
 			<p className={`w-full`}>{d.desc}</p>
 
 			{d.tags && (
-				<div className='w-full flex  gap-1  flex-wrap-reverse'>
+				<div className='w-full flex  gap-2  flex-wrap-reverse'>
 					{d.tags.split("/").map((tag) => (
-						<a
-							href={`/work/tags/${tag.toLowerCase().replace(" ", "_")}`}
-							key={tag.replace(" ", "-")}>
-							<div className=' border-2 px-4 py rounded-2xl border-neutral hover:border-primary hover:text-primary '>{tag}</div>
-						</a>
+						//	<a
+						//	href={`/work/tags/${tag.toLowerCase().replace(" ", "_")}`}
+						//	key={tag.replace(" ", "-")}>
+						<div className=' border-2 px-4 py rounded-2xl border-neutral'>{tag}</div>
+						//</a>
 					))}{" "}
 				</div>
 			)}

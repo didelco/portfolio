@@ -44,10 +44,10 @@ const SwitchTheme = () => {
 				xmlns='http://www.w3.org/2000/svg'
 				className='swap-off fill-current p-1 md:p-0 w-8 h8 icon icon-tabler icon-tabler-moon'
 				viewBox='0 0 24 24'
-				stroke-width='0'
+				strokeWidth='0'
 				stroke='currentColor'
-				stroke-linecap='round'
-				stroke-linejoin='round'>
+				strokeLinecap='round'
+				strokeLinejoin='round'>
 				<path
 					stroke='none'
 					d='M0 0h24v24H0z'

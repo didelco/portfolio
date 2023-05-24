@@ -55,7 +55,7 @@ export default async function Post({ params }: { params: { slug: string } }) {
 					{post.deepdive ? (
 						post.finish ? (
 							<div
-								className={`w-full  flex flex-col items-end `}
+								className={`w-full   `}
 								dangerouslySetInnerHTML={{ __html: content }}
 							/>
 						) : (
